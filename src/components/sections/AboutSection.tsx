@@ -43,14 +43,14 @@ const AboutSection = () => {
             
             <div className="flex items-center space-x-6 mt-8">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ce/GAF_logo.svg"
+                src="https://www.gaf.com/en-us/-/media/gaf-com/images/promo-images/professional-partners/certified-contractors/253x125_certified-logo.png"
                 alt="GAF Certified" 
                 className="h-16 grayscale hover:grayscale-0 transition-all"
               />
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Owens_Corning_logo.svg" 
+                src="https://dcpcsites.com/roofingsitedesigns/wp-content/uploads/sites/9/2023/09/owens-corning-roofing-platinum-preferred.png" 
                 alt="Owens Corning Certified" 
-                className="h-12 grayscale hover:grayscale-0 transition-all"
+                className="h-16 grayscale hover:grayscale-0 transition-all"
               />
             </div>
           </div>

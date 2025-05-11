@@ -45,43 +45,55 @@ const Navbar = () => {
           <nav className="flex items-center space-x-6">
             <Link
               to="/"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
               Home
             </Link>
-            <Link
-              to="#services"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+            <a
+              href="#services"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
               Services
-            </Link>
-            <Link
-              to="#about"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+            </a>
+            <a
+              href="#about"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
               About
-            </Link>
+            </a>
             <Link
-              to="#portfolio"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+              to="/service-areas"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
-              Portfolio
+              Service Areas
             </Link>
             <Link
-              to="#testimonials"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+              to="/blog"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
-              Testimonials
+              Blog
             </Link>
-            <Link
-              to="#contact"
-              className="text-haddon-navy font-medium hover:text-haddon-accent transition-colors"
+            <a
+              href="#contact"
+              className={`font-medium hover:text-haddon-accent transition-colors ${
+                isScrolled ? "text-haddon-navy" : "text-white"
+              }`}
             >
               Contact
-            </Link>
+            </a>
           </nav>
           <div className="flex items-center space-x-3">
-            <Button className="bg-haddon-navy hover:bg-haddon-accent transition-colors">
+            <Button className={`${isScrolled ? "bg-haddon-navy" : "bg-haddon-accent"} hover:bg-haddon-accent transition-colors`}>
               <a href="#contact" className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" /> Free Estimate
               </a>
@@ -96,17 +108,17 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-haddon-navy transition-transform ${
+            className={`block w-6 h-0.5 ${isScrolled ? "bg-haddon-navy" : "bg-white"} transition-transform ${
               mobileMenuOpen ? "transform rotate-45 translate-y-2" : ""
             }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-haddon-navy transition-opacity ${
+            className={`block w-6 h-0.5 ${isScrolled ? "bg-haddon-navy" : "bg-white"} transition-opacity ${
               mobileMenuOpen ? "opacity-0" : "opacity-100"
             }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-haddon-navy transition-transform ${
+            className={`block w-6 h-0.5 ${isScrolled ? "bg-haddon-navy" : "bg-white"} transition-transform ${
               mobileMenuOpen ? "transform -rotate-45 -translate-y-2" : ""
             }`}
           ></span>
@@ -141,20 +153,20 @@ const Navbar = () => {
           >
             About
           </a>
-          <a
-            href="#portfolio"
+          <Link
+            to="/service-areas"
             className="text-haddon-navy font-medium py-2 hover:text-haddon-accent"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Portfolio
-          </a>
-          <a
-            href="#testimonials"
+            Service Areas
+          </Link>
+          <Link
+            to="/blog"
             className="text-haddon-navy font-medium py-2 hover:text-haddon-accent"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Testimonials
-          </a>
+            Blog
+          </Link>
           <a
             href="#contact"
             className="text-haddon-navy font-medium py-2 hover:text-haddon-accent"

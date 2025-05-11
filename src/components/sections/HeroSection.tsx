@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -20,14 +21,14 @@ const HeroSection = () => {
           Premium roofing solutions for residential and commercial properties. Licensed, insured, and trusted by homeowners for over 20 years.
         </p>
         <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start animate-fade-in">
-          <Button className="bg-white text-haddon-navy hover:bg-gray-100 px-8 py-6 text-lg transition-all transform hover:scale-105">
+          <Button className="bg-haddon-accent text-white hover:bg-haddon-accent/90 px-8 py-6 text-lg transition-all transform hover:scale-105">
             <a href="#contact" className="flex items-center">
-              Get a Free Estimate
+              <Phone className="w-5 h-5 mr-2" /> Get a Free Estimate
             </a>
           </Button>
           <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-            <a href="#services">
-              Explore Services
+            <a href="#services" className="flex items-center">
+              Explore Services <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </Button>
         </div>
